@@ -18,8 +18,9 @@ apply plugin: 'io.spring.dependency-management'//类似maven的<dependencyManage
 
 group = 'com.fu'
 version = '1'
-sourceCompatibility = '1.8'//java版本
-targetCompatibility = '1.8'//java版本
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"//编码
 }
@@ -35,4 +36,5 @@ dependencies {//类似于maven的dependencies
 bootJar {//修改打成jar包以后的名字
     baseName('gradle')//自定义的jar包名
     version(null)//版本号
+    mainClassName = 'com.fu.gradledemo.GradledemoApplication'
 }
