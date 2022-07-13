@@ -33,8 +33,6 @@ dependencies {//类似于maven的dependencies
     implementation 'org.springframework.boot:spring-boot-starter-web'//格式为groupId:artifactId:version
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
-    testCompileOnly 'org.projectlombok:lombok'
-    testAnnotationProcessor 'org.projectlombok:lombok'
 }
 
 bootJar {//修改打成jar包以后的名字
