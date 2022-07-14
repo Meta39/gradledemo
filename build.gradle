@@ -36,10 +36,10 @@ repositories {
 
 dependencies {//类似于maven的dependencies
     implementation 'org.springframework.boot:spring-boot-starter-web'//格式为groupId:artifactId:version
-    compileOnly 'org.projectlombok:lombok'
+    compileOnly 'org.projectlombok:lombok'//仅编译时使用，不参与打包
     annotationProcessor 'org.projectlombok:lombok'
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
-    runtimeClasspath 'mysql:mysql-connector-java'
+    runtimeClasspath 'mysql:mysql-connector-java'//仅运行时使用，不参与编译，参与打包
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.boot:spring-boot-starter-aop'
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
