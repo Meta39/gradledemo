@@ -45,10 +45,20 @@ dependencies {//类似于maven的dependencies
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
     implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2'
     implementation 'com.github.pagehelper:pagehelper-spring-boot-starter:1.4.2'
+    compileOnly 'io.github.yedaxia:japidocs:1.4.4'
 }
 
 bootJar {//修改打成jar包以后的名字
     baseName('gradle')//自定义的jar包名
     version(null)//版本号
     mainClassName = 'com.fu.gradledemo.GradledemoApplication'
+}
+
+sourceSets{
+    main{
+        java{
+            //打包排除的文件
+            exclude 'com/fu/gradledemo/JApiDocs.java'
+        }
+    }
 }
