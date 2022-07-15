@@ -54,11 +54,15 @@ bootJar {//修改打成jar包以后的名字
     mainClassName = 'com.fu.gradledemo.GradledemoApplication'
 }
 
+
+//打包排除的文件
 sourceSets{
     main{
         java{
-            //打包排除的文件
             exclude 'com/fu/gradledemo/JApiDocs.java'
+        }
+        resources{
+//            exclude 'application.yml'
         }
     }
 }
