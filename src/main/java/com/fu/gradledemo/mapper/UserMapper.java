@@ -2,10 +2,12 @@ package com.fu.gradledemo.mapper;
 
 import com.fu.gradledemo.entity.User;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
+@Mapper
 public interface UserMapper {
 
     /**
