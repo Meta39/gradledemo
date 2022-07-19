@@ -53,6 +53,5 @@ bootJar {//修改打成jar包以后的名字
     baseName('gradle')//自定义的jar包名
     version(null)//版本号
     mainClassName = 'com.fu.gradledemo.GradledemoApplication'
-    exclude 'japidocs-1.4.4.jar'//排除jar
-    exclude 'com/rd/fu/JApiDocs.class'//排除文件
+    exclude 'japidocs-1.4.4.jar','com/rd/fu/JApiDocs.class'//打包排除文件
 }
